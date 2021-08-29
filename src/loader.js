@@ -5,7 +5,7 @@ import { scene } from './index.js';
 export let mixer= new THREE.AnimationMixer();
 export let action;
 export const gltfLoader2 = new GLTFLoader()
-    gltfLoader2.load('./zawor_kulowy_three2.glb', (gltf) => {
+    gltfLoader2.load('./zawor_kulowy_three_move1.glb', (gltf) => {
       const root = gltf.scene;
       const anim = gltf.animations;
       scene.add(root); //co zrobic z tym?

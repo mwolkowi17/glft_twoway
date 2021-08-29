@@ -80,7 +80,7 @@ const animate = function () {
     renderer.render(scene, camera);
     
   
-    controls.update();
+    controls.update()
     if (mixer ) mixer.update( delta );
     if (mixer.time>5){
       //console.log("time");
