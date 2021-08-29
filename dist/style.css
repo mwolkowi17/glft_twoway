@@ -15,3 +15,9 @@
     bottom: 25px;
     left: 260px;
 }
+
+#close_button{
+    position: absolute;
+    bottom: 25px;
+    left: 340px;;
+}

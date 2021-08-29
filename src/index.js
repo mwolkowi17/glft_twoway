@@ -22,6 +22,7 @@ scene.add(light4);
 scene.add(light4.target);
 
 let ifPlayed=false;
+let closed = false;
 let actionbutton = document.getElementById("start_button")
 actionbutton.addEventListener("click",function(){
   if(ifPlayed===false){
@@ -32,7 +33,7 @@ actionbutton.addEventListener("click",function(){
     mixer.setTime(a);
   }*/
   mixer.timeScale=1
-  
+  closed=true;
  action.play();
  
 },false)
@@ -56,6 +57,11 @@ resetbutton.addEventListener("click", function(){
   mixer.timeScale=0;
 }, false)
 
+let closebutton = document.getElementById("close_button");
+closebutton.addEventListener("click", function(){
+  closed=false;
+  mixer.timeScale=1;
+}, false)
 
     
 camera.position.z = 8;
@@ -82,10 +88,13 @@ const animate = function () {
   
     controls.update()
     if (mixer ) mixer.update( delta );
-    if (mixer.time>5){
-      //console.log("time");
-      mixer.timeScale=0
+    if (mixer.time>5 && closed===true){ 
+      mixer.timeScale=0;
      }
+
+    if (mixer.time>10 && closed===false){
+      mixer.timeScale=0;
+    }
 
 };
 
