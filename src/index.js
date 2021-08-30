@@ -37,12 +37,12 @@ actionbutton.addEventListener("click",function(){
  action.play();
  
 },false)
-let a;
+//let a;
 
 let stopbutton = document.getElementById("stop_button");
 stopbutton.addEventListener("click", function(){
   mixer.timeScale=0
-  a=mixer.time;
+  //a=mixer.time;
   ifPlayed=true;
  //action.stop();
 }, false)
