@@ -29,22 +29,20 @@ actionbutton.addEventListener("click",function(){
     mixer.setTime(0);
   }
   
-  /*if(ifPlayed===true){
-    mixer.setTime(a);
-  }*/
+
   mixer.timeScale=1
   closed=true;
  action.play();
  
 },false)
-//let a;
+
 
 let stopbutton = document.getElementById("stop_button");
 stopbutton.addEventListener("click", function(){
   mixer.timeScale=0
-  //a=mixer.time;
+ 
   ifPlayed=true;
- //action.stop();
+ 
 }, false)
 
 let resetbutton = document.getElementById("reset_button");
