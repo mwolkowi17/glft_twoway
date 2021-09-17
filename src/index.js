@@ -24,6 +24,7 @@ scene.add(light4.target);
 let ifPlayed=false;
 let closed = false;
 let actionbutton = document.getElementById("start_button")
+
 actionbutton.addEventListener("click",function(){
   if(ifPlayed===false){
     mixer.setTime(0);
